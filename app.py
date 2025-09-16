@@ -1,7 +1,7 @@
 import streamlit as st
 import os
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain.vectorstores import FAISS
+
+from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
 import os
 from dotenv import load_dotenv
@@ -35,4 +35,5 @@ if user_input:
         st.write(f"**Episode Number:** {doc.metadata.get('episode_number', 'N/A')}")
         st.write(f"**Title:** {doc.metadata.get('title', 'N/A')}")
         st.write(f"**Description:** {doc.metadata.get('description', 'N/A')}")
+
         st.markdown("---")
