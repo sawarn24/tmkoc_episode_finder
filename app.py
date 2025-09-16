@@ -15,7 +15,6 @@ embeddings = HuggingFaceEndpointEmbeddings(
     task="feature-extraction",
     huggingfacehub_api_token=HF_TOKEN
 )
-st.title("LET'S FIND YOUR TMOCKOC EPISODE")
 
 st.title("🎬 LET'S FIND YOUR TMKOC EPISODE 🎭")
 st.write("Got a storyline in mind but can't recall the episode? 🤔")
@@ -37,3 +36,4 @@ if user_input:
         st.write(f"**Description:** {doc.metadata.get('description', 'N/A')}")
 
         st.markdown("---")
+
